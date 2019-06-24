@@ -1,0 +1,57 @@
+.inquire {
+    height: 300px;
+    position: relative;
+
+    .inquire-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        button {
+            transition: ease 0.5s;
+            flex: 1;
+            background: color(backgroundcolor);
+            background-color: color(highlightcolor);
+            font-size: 15px;
+            padding: 10px 15px;
+            margin-bottom: 0;
+            font-weight: 800;
+            border: solid 5px transparent;
+            line-height: 100%;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: color(subprimary);
+            position: relative;
+            cursor: pointer;
+            transition: ease 0.5s;
+        }
+        
+        button a {
+            text-decoration: none;
+            color: color(primary);
+            transition: ease 0.5s;
+        }
+
+        button:hover a {
+            text-decoration: none;
+            color: color(subprimary);
+            transition: ease 0.5s;      
+        }
+
+        button:hover {
+            border: 5px solid color(subprimary);
+            background: color(backgroundcolor);
+            transition: ease 0.5s;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .inquire .inquire-button button {
+        font-size: 10px;
+        line-height: 150%;
+        padding: 5px;
+
+    }
+}

@@ -1,0 +1,182 @@
+
+/*1st grey section switch menu---------------------------*/
+
+.services-tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    max-height: 300px;
+    
+
+    .tab {
+        flex: 1;
+        margin-top: 50px;
+
+        button {
+            display: inline-block;
+            background: none;
+            position: relative;
+            color: color(subprimary);
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1.5rem;
+            text-align: right;
+            width: 90%;
+            cursor: pointer;
+        }
+
+        button::before, button::after{
+            content:"";
+            width: 0;
+            height: 2px;
+            position: absolute;
+            transition: all 0.5s ease;
+            background: color(subprimary);
+            opacity: 0.3;
+        }
+          
+        span::before, span::after{
+            content:"";
+            width:2px;
+            height:0;
+            position: absolute;
+            transition: all 0.5s ease;
+            background: color(subprimary);
+            opacity: 0.3;
+            
+        }
+
+        button:hover::before, button:hover::after{
+            width: 100%;
+        }
+        button:hover span::before, button:hover span::after{
+            height: 100%;
+        }
+        
+        .btn-2::before, .btn-2::after{
+            transition-delay: 0s;
+        }
+        .btn-2 span::before, .btn-2 span::after{
+            transition-delay: 0.2s;
+        }
+        .btn-2::before{
+            right: 0;
+            top: 0;
+        }
+        .btn-2::after{
+            left: 0;
+            bottom: 0;
+        }
+        .btn-2 span::before{
+            left: 0;
+            top: 0;
+        }
+        .btn-2 span::after{
+            right: 0;
+            bottom: 0;
+        }
+        .btn-2:hover::before, .btn-2:hover::after{
+            transition-delay: 0.2s;
+        }
+        .btn-2:hover span::before, .btn-2:hover span::after{
+            transition-delay: 0s;
+        }
+
+        .shrt {
+            max-width: 290px;
+            float: right;
+            margin-right: 80px;
+            min-width: 290px;
+        }
+
+        .med {
+            max-width: 485px;
+            float: right;
+            margin-right: 80px;
+            min-width: 485px;
+        }
+
+        .long {
+            max-width: 615px;
+            float: right;
+            margin-right: 80px;
+            min-width: 615px;
+        }
+    }
+
+    .tabcontent {
+        flex: 1;
+        float: right;
+        padding: 0px 12px;
+        width: 70%;
+        border-left: none;
+        height: 300px;
+        margin-top: 130px;
+        margin-left: 50px;
+        transition: ease 3s;
+    } 
+}
+
+.page-header3 {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+    .services-tabs .tabcontent {
+        margin-left: 0;
+    }
+}
+
+
+/*TABS GO AWAY*/
+
+
+@media (max-width: $tablet-max) {
+    .services-tabs {
+        display: none;
+    }
+
+    .page-header3 {
+        display: block;
+        font-size: 16px;
+        z-index: 2;
+        
+        .tabcontent { 
+            padding: 0px 12px;
+            width: 100%;
+            border-left: none;
+            height: 100%;
+            margin: 0 auto;
+            font-size: 1rem;
+            margin-left: 0;
+
+    
+            mark {
+                background-color: transparent;
+                color: color(subprimary);
+                font-style: normal;
+            }
+    
+            mark:hover {
+                background-color: color(highlightcolor);
+                color: color(primary);
+                font-style: normal;
+            }
+    
+            
+            a {
+                color: color(subprimary);
+                -webkit-transition: color 0.3s; /* For Safari 3.0 to 6.0 */
+                transition: color 0.3s;
+            }
+            
+            a:hover {
+                color: color(highlightcolor);
+            }
+        } 
+    }
+}

@@ -1,0 +1,79 @@
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    width: 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.toggle-button:focus {
+    outline: none;
+}
+
+.toggle-button__line {
+    width: 30px;
+    height: 3px;
+    background: color(subprimary);
+    transition: 0.2s linear;
+}
+
+.toggle-button__line:nth-child(odd) {
+    margin-left: 5px;
+    transition: 0.2s linear;
+}
+
+.toggle-button:hover .toggle-button__line:nth-child(odd) {
+    margin-left: 0px;
+    transition: 0.2s linear;
+}
+
+.toggle-button:hover .toggle-button__line:nth-child(even) {
+    margin-left: 5px;
+    transition: 0.2s linear;
+}
+
+.side-drawer {
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background: color(primary);
+    width: 100vw;
+    z-index: 999999999999;
+    text-decoration: none;
+
+    ul li{
+        display: block;
+        padding-top: 125px;
+        margin: 0 auto;
+        justify-content: center;
+        color: color(subprimary);
+        text-decoration: none;
+        
+    }
+
+    ul li .a{
+       padding: 5px 5px 5px 5px;
+       font-size: 22px;
+       line-height: 30px;
+       color: color(subprimary);
+       text-decoration: none;
+    }
+
+    ul li .a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 3px;
+        content: "";
+        display: block;
+        height: 2.5px;
+        position: absolute;
+        background: #333333;
+        transition: width 0.4s ease 0.13s, left 0.6s ease 0.13s;
+        width: 0;
+    }
+}

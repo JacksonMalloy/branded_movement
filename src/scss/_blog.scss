@@ -1,0 +1,239 @@
+#blog-container {
+    position: relative;
+    height: 100%;;
+    margin-top: 72px;
+    align-content: center;
+}
+
+.blog-head {
+    height: 100%;
+    background: color(backgroundcolor);
+    display: flex;
+
+    h1 {
+        flex: 1;
+        margin: 50px auto;
+    }
+
+    p {
+        flex: 2;
+        text-align: center;
+        margin: auto 150px; 
+    }
+}
+
+
+
+.blog-card {
+    background: color(backgroundcolor);
+    margin-top: 50px;
+    display: flex;
+    overflow: hidden;
+
+    .blog-text {
+        flex: 1;
+        padding: 65px;
+
+        h4 {
+            font-size: 38px;
+            margin-bottom: 30px;
+            padding-top: 15px;
+            color: color(subprimary);
+        }
+
+        p {
+            font-size: 18px;
+            color: color(subprimary);
+            line-height: 150%;
+        }
+    }
+
+    .blog-image {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+        
+        img {
+            position: absolute;
+            top: 100%;                       
+            transform: translate(-30%, -80%); 
+            width: 2200px;
+                                 
+        }
+    }
+}
+
+@media (max-width: 830px) {
+    .blog-head h1 {
+        font-size: 40px;
+        margin: 0 auto;
+        line-height: 150%;
+    }
+
+    .blog-head p {
+        font-size: 18px;
+        text-align: center;
+        margin: 0 auto;
+        line-height: 150%;
+    }
+
+    .blog-head {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .blog-card {
+        flex-direction: column;
+    }
+
+    .blog-card .blog-text {
+        padding: 15px;
+    }
+
+    .blog-card .blog-text p{
+        font-size: 13px;
+        line-height: 190%;
+    }
+
+    .blog-card .blog-text h4 {
+        font-size: 24px; 
+    }
+}
+
+.greybox {
+    background-color: color(primary);
+    height: 800px;
+    position:  relative;
+}
+
+.blog-banner {
+    height: 400px;
+    z-index: 1;
+    background-color: color(backgroundcolor);
+    max-width: 80%;
+    margin: 0 auto -80px;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+        position: absolute;
+        width: 3000px;
+        top: 100%;                       
+        transform: translate(-30%, -80%); 
+        
+    }
+}
+
+.blog-inner-container {
+    height: 100%;
+    margin-top: 0px;
+    display: flex;
+    background-color: #efefef;
+    z-index: 0;
+    margin: 0 auto;
+    width: 90%;
+
+    .blog-content {
+        padding: 35px;
+        margin: 0 auto;
+        background-color: color(backgroundcolor);
+        width: 65%;
+        max-width: 1060px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.blog-date {
+    float: right;
+    padding: 20px;
+}
+
+.blog-title {
+    font-size: 38px;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 200%;
+    padding: 20px;
+}
+
+.blog-button {
+    background: color(backgroundcolor);
+    background-color: color(highlightcolor);
+    font-size: 15px;
+    padding: 10px 15px;
+    margin: 50px 0px 0px 0px;
+    font-weight: 800;
+    border: solid 5px transparent;
+    line-height: 100%;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: color(subprimary);
+    cursor: pointer;
+    transition: ease 0.5s;
+    width: 150px;
+    float: right;
+    text-align: center;
+}
+
+.blog-button a {
+    color: color(primary);
+    text-decoration: none;
+    font-style: none;
+    transition: ease 0.5s;
+}
+
+.blog-button:hover {
+    border: 5px solid color(subprimary);
+    background: color(backgroundcolor);
+    transition: ease 0.5s;
+    color: color(subprimary);
+}
+
+.blog-button:hover a {
+    color: color(subprimary);
+    transition: ease 0.5s;
+}
+   
+.blog-button.active {
+    background-color: color(backgroundcolor);
+}
+
+@media (max-width: 830px) {
+    .blog-banner {
+        margin: 0 auto;
+    }
+
+    .blog-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+        padding: 20px;
+    }
+
+    .blog-inner-container {
+        margin: 0 auto;
+    }
+
+    .blog-banner img {
+        width: 1800px;
+    }
+
+    .blog-inner-container .blog-content{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .blog-inner-container .post-content p {
+        font-size: 13px;
+        line-height: 190%;
+    }
+
+    .blog-button {
+        margin: 30px;
+    }
+}
