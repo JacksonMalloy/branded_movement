@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const drawerToggleButton = props => (
-    <div className="toggle-button" onClick={props.click}>
-        <div className="toggle-button__line"></div>
-        <div className="toggle-button__line"></div>
-        <div className="toggle-button__line"></div>
-    </div>
+const drawerToggleButton = () => (
+  <div className='toggle-button'>
+    <div className='toggle-button__line' />
+    <div className='toggle-button__line' />
+    <div className='toggle-button__line' />
+  </div>
 );
 
 export default drawerToggleButton;

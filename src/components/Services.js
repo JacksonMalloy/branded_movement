@@ -1,23 +1,19 @@
-import React, { Component } from 'react'
-import { ServiceConsumer } from '../Context'
+import React from 'react';
+import { ServiceConsumer } from '../Context';
 
-
-
-export default class Services extends Component {
-    render() {
+export default function Services() {
+  return (
+    <ServiceConsumer>
+      {value => {
+        const { title, company, info } = value.detailService;
         return (
-            <ServiceConsumer>
-                { (value) => {
-                    const { title, company, info } = value.detailService;
-                    return (
-                        <div>
-                            <h1>{title}</h1>
-                            <span>{company}</span>
-                            <p>{info}</p>
-                        </div>
-                    )
-                }}
-            </ServiceConsumer>
-        )
-    }
+          <div>
+            <h1>{title}</h1>
+            <span>{company}</span>
+            <p>{info}</p>
+          </div>
+        );
+      }}
+    </ServiceConsumer>
+  );
 }

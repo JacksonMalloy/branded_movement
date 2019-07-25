@@ -14,9 +14,9 @@ export default function Footer() {
             <Link to='/about'>
               <li className='hvr-bounce-to-right'>About</li>
             </Link>
-            <Link to='/work'>
+            {/* <Link to='/work'>
               <li className='hvr-bounce-to-right'>Work</li>
-            </Link>
+            </Link> */}
             <Link to='/blog'>
               <li className='hvr-bounce-to-right'>Blog</li>
             </Link>

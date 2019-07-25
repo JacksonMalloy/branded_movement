@@ -1,26 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ServiceConsumer } from '../Context';
 
-export default class Service extends Component {
-    render() {
-        const { id, title, company, info } = this.props.service;
-        return (
-            <div>
-                <ServiceConsumer>
-                    {(value) => ((
-                        <div onClick={() => value.handleDetail(id)}>
-                            <Link to="/services">
-                                <button>Learn More</button>
-                            </Link>
-                            {title}
-                            {company}
-                            {info}
-                        </div>
-                    ))}
-                </ServiceConsumer>
-            </div>
-        );
-    }
+export default function Service(props) {
+  const { id, title, company, info } = props.service;
+  return (
+    <div>
+      <ServiceConsumer>
+        {value => (
+          <div onClick={() => value.handleDetail(id)}>
+            <Link to='/services'>
+              <button>Learn More</button>
+            </Link>
+            {title}
+            {company}
+            {info}
+          </div>
+        )}
+      </ServiceConsumer>
+    </div>
+  );
 }
-
