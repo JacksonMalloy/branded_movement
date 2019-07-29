@@ -1,5 +1,8 @@
 .triangle-grey-white {
-  border-width: 250px 100vw 0 0;
+  border-top-width: 250px;
+  border-right-width: 100vw;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -37,7 +40,10 @@
 }
 
 .triangle-grey-white-about {
-  border-width: 0 0 250px 100vw;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 250px;
+  border-left-width: 100vw;
   width: 0;
   height: 0;
   border-style: solid;
