@@ -1,8 +1,8 @@
 .triangle-grey-white {
-  border-top-width: 250px;
-  border-right-width: 100vw;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
+  border-top-width: 250px !important;
+  border-right-width: 100vw !important;
+  border-bottom-width: 0px !important;
+  border-left-width: 0px !important;
   width: 0;
   height: 0;
   border-style: solid;
@@ -15,10 +15,10 @@
 }
 
 .triangle-white-grey {
-  border-top-width: 0px;
-  border-right-width: 100vw;
-  border-bottom-width: 250px;
-  border-left-width: 0px;
+  border-top-width: 0px !important;
+  border-right-width: 100vw !important;
+  border-bottom-width: 250px !important;
+  border-left-width: 0px !important;
   width: 0;
   height: 0;
   border-style: solid;
@@ -30,10 +30,10 @@
 }
 
 .triangle-white-grey2 {
-  border-top-width: 0px;
-  border-right-width: 100vw;
-  border-bottom-width: 250px;
-  border-left-width: 0px;
+  border-top-width: 0px !important;
+  border-right-width: 100vw !important;
+  border-bottom-width: 250px !important;
+  border-left-width: 0px !important;
   width: 0;
   height: 0;
   border-style: solid;
@@ -46,10 +46,10 @@
 }
 
 .triangle-grey-white-about {
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 250px;
-  border-left-width: 100vw;
+  border-top-width: 0px !important;
+  border-right-width: 0px !important;
+  border-bottom-width: 250px !important;
+  border-left-width: 100vw !important;
   width: 0;
   height: 0;
   border-style: solid;
