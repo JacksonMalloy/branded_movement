@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './scss/App.scss';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
