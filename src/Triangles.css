@@ -10,7 +10,7 @@
   border-right-color: transparent !important;
   position: relative;
   z-index: 4;
-  border-top-color: color(backgroundcolor);
+  border-top-color: #ffffff;
   margin-bottom: 0px;
 }
 
@@ -26,7 +26,7 @@
   border-right-color: transparent !important;
   position: relative;
   z-index: 1;
-  border-bottom-color: color(primary);
+  border-bottom-color: #f6f6f6;
 }
 
 .triangle-white-grey2 {
@@ -41,7 +41,7 @@
   border-right-color: transparent !important;
   position: absolute;
   z-index: 1;
-  border-bottom-color: color(backgroundcolor);
+  border-bottom-color: #ffffff;
   bottom: 0px;
 }
 
@@ -56,11 +56,11 @@
   border-left-color: transparent !important;
   position: absolute;
   z-index: 1;
-  border-bottom-color: color(backgroundcolor);
+  border-bottom-color: #ffffff;
   bottom: 0px;
 }
 
-@media (max-width: $tablet-max) {
+@media (max-width: 1024px) {
   .triangle-grey-white {
     border-top-width: 80px;
     border-right-width: 100vw;
