@@ -15,7 +15,10 @@
 }
 
 .triangle-white-grey {
-  border-width: 0 100vw 250px 0;
+  border-top-width: 0px;
+  border-right-width: 100vw;
+  border-bottom-width: 250px;
+  border-left-width: 0px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -27,7 +30,10 @@
 }
 
 .triangle-white-grey2 {
-  border-width: 0 100vw 250px 0;
+  border-top-width: 0px;
+  border-right-width: 100vw;
+  border-bottom-width: 250px;
+  border-left-width: 0px;
   width: 0;
   height: 0;
   border-style: solid;
@@ -56,19 +62,31 @@
 
 @media (max-width: $tablet-max) {
   .triangle-grey-white {
-    border-width: 80px 100vw 0 0;
+    border-top-width: 80px;
+    border-right-width: 100vw;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
     margin-bottom: 50px;
   }
 
   .triangle-white-grey {
-    border-width: 0 100vw 80px 0;
+    border-top-width: 0px;
+    border-right-width: 100vw;
+    border-bottom-width: 80px;
+    border-left-width: 0px;
   }
 
   .triangle-white-grey2 {
-    border-width: 0 100vw 80px 0;
+    border-top-width: 0px;
+    border-right-width: 100vw;
+    border-bottom-width: 80px;
+    border-left-width: 0px;
   }
 
   .triangle-grey-white-about {
-    border-width: 0 0 80px 100vw;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 80px;
+    border-left-width: 100vw;
   }
 }
