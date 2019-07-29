@@ -1,3 +1,97 @@
+* {
+  letter-spacing: 0.4px;
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+}
+
+$colors: (
+  primary: #f6f6f6,
+  subprimary: #333333,
+  highlightcolor: #e74c3c,
+  backgroundcolor: #ffffff,
+  median: #e6e6e6
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(
+          #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *
+            ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})
+        );
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$desktop-max: 1700px !default;
+$tablet-max: 1024px !default;
+$mobile-max: 425px !default;
+
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+
+$min_width_mobile: 320px;
+$max_width_mobile: 425px;
+$min_font_mobile: 13px;
+$max_font_mobile: 13px;
+
+$min_width_tablet: 426px;
+$max_width_tablet: 1024px;
+$min_font_tablet: 14px;
+$max_font_tablet: 18px;
+
+$min_width_desktop: 1025px;
+$max_width_desktop: 1700px;
+$min_font_desktop: 21px;
+$max_font_desktop: 23px;
+
+html {
+  @media (max-width: 425px) {
+    @include fluid-type(
+      $min_width_mobile,
+      $max_width_mobile,
+      $min_font_mobile,
+      $max_font_mobile
+    );
+  }
+  @media (min-width: 426px) and (max-width: 1024px) {
+    @include fluid-type(
+      $min_width_tablet,
+      $max_width_tablet,
+      $min_font_tablet,
+      $max_font_tablet
+    );
+  }
+  @media (min-width: 1025px) and (max-width: 4000px) {
+    @include fluid-type(
+      $min_width_desktop,
+      $max_width_desktop,
+      $min_font_desktop,
+      $max_font_desktop
+    );
+  }
+}
+
 .triangle-grey-white {
   border-top-width: 250px;
   border-right-width: 100vw;
