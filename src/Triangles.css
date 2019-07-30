@@ -62,31 +62,31 @@
 
 @media (max-width: 1024px) {
   .triangle-grey-white {
-    border-top-width: 80px;
-    border-right-width: 100vw;
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    margin-bottom: 50px;
+    border-top-width: 80px !important;
+    border-right-width: 100vw !important;
+    border-bottom-width: 0px !important;
+    border-left-width: 0px !important;
+    margin-bottom: 50px !important;
   }
 
   .triangle-white-grey {
-    border-top-width: 0px;
-    border-right-width: 100vw;
-    border-bottom-width: 80px;
-    border-left-width: 0px;
+    border-top-width: 0px !important;
+    border-right-width: 100vw !important;
+    border-bottom-width: 80px !important;
+    border-left-width: 0px !important;
   }
 
   .triangle-white-grey2 {
-    border-top-width: 0px;
-    border-right-width: 100vw;
-    border-bottom-width: 80px;
-    border-left-width: 0px;
+    border-top-width: 0px !important;
+    border-right-width: 100vw !important;
+    border-bottom-width: 80px !important;
+    border-left-width: 0px !important;
   }
 
   .triangle-grey-white-about {
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-bottom-width: 80px;
-    border-left-width: 100vw;
+    border-top-width: 0px !important;
+    border-right-width: 0px !important;
+    border-bottom-width: 80px !important;
+    border-left-width: 100vw !important;
   }
 }
